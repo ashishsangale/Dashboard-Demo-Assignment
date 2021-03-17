@@ -1,0 +1,40 @@
+.navbar {
+  width: 100%;
+  max-width: 100%;
+  min-height: 6vh;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color:  #282c34;
+  transition: all 0.2s ease;
+  color: #61dafb;
+}
+.scrolled {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #61dafb;
+}
+
+.navigation ul {
+  box-sizing: border-box;
+  list-style-type: none;
+  display: flex;
+  min-height: 6vh;
+  justify-content: flex-end;
+  align-items: center;
+}
+.navigation ul li {
+  text-align: center;
+  padding: 0.5em;
+  cursor: pointer;
+}
+.navigation ul li:hover {
+  background-color: #61dafb;
+  color: white;
+}
+.navigation ul li a {
+  text-decoration: none;
+  color: inherit;
+}
