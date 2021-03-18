@@ -1,49 +1,73 @@
-import React, { useState, useEffect } from 'react'
-import { Line, Pie } from 'react-chartjs-2';
+import React from 'react';
 
 function Charts({Graph}) {
-    const [data, setData] = useState({})
-
-    useEffect(() => {
-        getData();
-    }, []);
-
-    const getData = () =>{
-        
-        setData({
-          data:{
-            labels: ['Boston', 'Worcester', 'Springfield', 'Lowell', 'Cambridge', 'New Bedford'],
-            datasets:[
-              {
-                label:'Population',
-                data:[
-                  617594,
-                  181045,
-                  153060,
-                  106519,
-                  105162,
-                  95072
-                ],
-                backgroundColor:[
-                  'rgba(255, 99, 132, 0.6)',
-                  'rgba(54, 162, 235, 0.6)',
-                  'rgba(255, 206, 86, 0.6)',
-                  'rgba(75, 192, 192, 0.6)',
-                  'rgba(153, 102, 255, 0.6)',
-                  'rgba(255, 159, 64, 0.6)',
-                  'rgba(255, 99, 132, 0.6)'
-                ]
-              }
-            ]
-          }
-        });
+  
+    const data = {
+      labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+      datasets: [
+        {
+          label: 'Number of votes',
+          data: [12, 19, 3, 5, 2, 3],
+          backgroundColor: [
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(75, 192, 192, 0.2)',
+            'rgba(153, 102, 255, 0.2)',
+            'rgba(255, 159, 64, 0.2)',
+          ],
+          borderColor: [
+            'rgba(255, 99, 132, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 1)',
+            'rgba(153, 102, 255, 1)',
+            'rgba(255, 159, 64, 1)',
+          ],
+          borderWidth: 1,
+        },
+      ],
     }
-    console.log(data)
+
 
     
         return (
             <div>
-                <Line data={data} options={{ maintainAspectRatio: false, responsive: true }}/>
+                <Graph 
+                data={data} 
+                width={300} 
+                height={300} 
+                options={{
+                  maintainAspectRatio: false,
+                  scales: {
+                    yAxes: [
+                      {
+                        ticks: {
+                          beginAtZero: true,
+                        },
+                      },
+                    ],
+                  },
+                  legend: {
+                    labels: {
+                      fontSize: 10,
+                    },
+                  },
+                  title: {
+                    display: true,
+                    text: 'Custom Chart Title',
+                    fontSize: 20
+                  },
+                  layout: {
+                    padding: {
+                        left: 0,
+                        right: 0,
+                        top: 0,
+                        bottom: 0
+                    }
+                }
+                }}
+                />
             </div>
         )
     
