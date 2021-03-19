@@ -1,0 +1,22 @@
+.modal{
+    z-index: 100;
+    position: fixed;
+    top: 22vh;
+    left: 25%;
+    width: 50%;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.modal-content{
+    padding: 1rem;
+}
+
+.button{
+    margin-top: 10px;
+    margin-right: 10px;
+}
