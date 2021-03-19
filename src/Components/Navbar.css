@@ -1,20 +1,13 @@
 .navbar {
   width: 100%;
   max-width: 100%;
-  min-height: 6vh;
-  box-sizing: border-box;
+  height: 10%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color:  #282c34;
   transition: all 0.2s ease;
   color: #61dafb;
-}
-.scrolled {
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: #61dafb;
 }
 
 .navigation ul {
@@ -27,7 +20,7 @@
 }
 .navigation ul li {
   text-align: center;
-  padding: 0.5em;
+  padding: 1rem;
   cursor: pointer;
 }
 .navigation ul li:hover {

@@ -55,8 +55,8 @@ function Charts({Graph}) {
                   },
                   title: {
                     display: true,
-                    text: 'Custom Chart Title',
-                    fontSize: 20
+                    text: 'Sample Data for Demonstration',
+                    fontSize: 25
                   },
                   layout: {
                     padding: {
